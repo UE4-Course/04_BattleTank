@@ -3,6 +3,19 @@
 #include "TankAIController.h"
 #include "Engine/World.h"
 
+void ATankAIController::Tick(float DeltaTime) //Call every frame
+{
+	Super::Tick(DeltaTime);
+	if (GetPlayerTank)
+	{
+		// TODO Move Towards Player
+
+		// Aim Towards Player
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+
+		// fire if ready
+	}
+}
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
