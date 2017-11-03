@@ -6,7 +6,7 @@
 void ATankAIController::Tick(float DeltaTime) //Call every frame
 {
 	Super::Tick(DeltaTime);
-	if (GetPlayerTank)
+	if (GetPlayerTank())
 	{
 		// TODO Move Towards Player
 
